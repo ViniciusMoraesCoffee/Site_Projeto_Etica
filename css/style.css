@@ -5,31 +5,53 @@
     list-style: none;
     border: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: rgb(197, 219, 239);
+    background-color: #c5dbef;
     display: grid;
     grid-template-areas:
         "header header header"
         ". main ."
         "footer footer footer";
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 75px 800px 75px;
+    grid-template-rows: 75px auto 75px;
 }
 header {
-    background-color: tomato;
-    box-shadow: 0 3px 3px rgb(180, 210, 230);
+    background-color: #ffffff;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-area: header;
+    box-shadow: 0 3px 3px #b4d2e6;
 }
+
+.wrapper-nav-btns ul {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper-nav-btns ul li {
+    cursor: pointer;
+}
+
+
 main {
     background-color: goldenrod;
+    box-shadow: 3 3px 3px #b4d2e6;
     position: relative;
     z-index: -1;
     grid-area: main;
 }
+section {
+    border: 1px solid gray;
+    height: 420px;
+}
+
 footer {
     background-color: blueviolet;
     grid-area: footer;
-    box-shadow: 0 -3px 3px rgb(180, 210, 230);
+    box-shadow: 0 -3px 3px #b4d2e6;
 }
