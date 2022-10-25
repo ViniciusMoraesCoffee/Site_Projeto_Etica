@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(197, 219, 239);
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 75px 800px 75px;
+}
+header {
+    background-color: tomato;
+    box-shadow: 0 3px 3px rgb(180, 210, 230);
+    grid-area: header;
+}
+main {
+    background-color: goldenrod;
+    position: relative;
+    z-index: -1;
+    grid-area: main;
+}
+footer {
+    background-color: blueviolet;
+    grid-area: footer;
+    box-shadow: 0 -3px 3px rgb(180, 210, 230);
+}
